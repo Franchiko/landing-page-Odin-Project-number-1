@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   width: 100%;
@@ -23,11 +22,8 @@ h1 {
 .navbar {
   width: 90%;
   padding-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   position: fixed;
 }
 .navbar .logo img {
@@ -35,12 +31,8 @@ h1 {
   height: 5rem;
 }
 .navbar .navbar-list .list-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .navbar .navbar-list .list-menu .list-element {
   list-style: none;
@@ -49,11 +41,8 @@ h1 {
 .hero-section {
   padding-top: 6rem;
   padding-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 90%;
   margin: 0 auto;
 }
@@ -61,9 +50,7 @@ h1 {
   width: 60%;
   text-align: left;
   padding: 1rem 2rem 0 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 .hero-section .column1 p {
   color: #656b78;
@@ -79,9 +66,7 @@ h1 {
 }
 .hero-section .column2 {
   width: 40%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 .hero-section .column2 img {
   width: 100%;
@@ -93,24 +78,20 @@ h1 {
   padding: 2rem 3rem;
 }
 .cards-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #f9faf8;
 }
 .cards-body .card {
   width: 20%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   margin: 0 auto;
 }
 .cards-body .card img {
   width: 90%;
   height: 50%;
+  object-fit: cover;
   border: 1px solid #3882f6;
   border-radius: 0.6rem;
 }
@@ -171,4 +152,24 @@ footer {
 footer p {
   padding: 1rem 0;
   font-size: 0.7rem;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    display: block;
+  }
+  .hero-section .column1 {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .hero-section .column2 {
+    width: 100%;
+  }
+  .cards-body {
+    display: block;
+  }
+  .cards-body .card {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
 }
